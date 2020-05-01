@@ -1,0 +1,15 @@
+$minsize:480px;
+$changesize:740px;
+
+@mixin responsive($width) {
+    @if $width == "screen1"{
+        @media screen and (min-width: $minsize) and (max-width: $changesize){
+            @content;
+        }
+    }
+    @else if $width == "screen2"{
+        @media screen and (min-width: $changesize) and (max-width: 2000px){
+            @content;
+         }
+    }
+}
